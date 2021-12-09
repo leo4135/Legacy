@@ -16,7 +16,7 @@ body {
   font-size: 0.8rem;
   line-height: 1.2;
   color: @black;
-  padding: 65px 0 0;
+  padding: 100px 0 0;
   margin: 0;
 }
 
@@ -79,19 +79,19 @@ header {
 }
 
 .slide {
-  background: url("img/slide_4_scaled.png");
+  background: url("img/slide-4-scaled_1.png");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 
   .wrapper {
-    padding: 0;
+    padding: 15px;
 
     .new {
-      padding: 40px 40px;
+      padding-top: 20px;
       display: flex;
       flex-direction: column;
-      width: 30%;
+      max-width: 30%;
       text-align: center;
       max-height: 15%;
 
@@ -100,21 +100,27 @@ header {
       }
 
       p {
-        margin-top: 20px;
+
         font-size: 1rem;
       }
 
+
+    }
+
+    .btnn {
+      width: 30%;
+      text-align: center;
+
       .btn {
-        margin-top: 20px;
         font-size: 0.8rem;
         padding: 10px 35px;
         align-self: center;
         background: #FFED00;
         border: none;
         border-radius: 8px;
+        margin-bottom: 30px;
       }
     }
-
   }
 }
 
@@ -221,10 +227,15 @@ header {
     color: #E5E5E5;
 
     .text_stat {
-      display: grid;
-      grid-gap: 5px;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-items: center;
+      display: flex;
+      justify-content: center;
+
+      .go {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+      }
+
     }
 
     .btn {
@@ -238,14 +249,15 @@ header {
 }
 
 .legacy2 {
+  background-image: url("img/pattern_add.png");
+  background-color: #2F2E2E;
+  color: #F6F6F6;
+
   .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("img/pattern_add.png");
     text-align: center;
-    background-color: #2F2E2E;
-    color: #F6F6F6;
 
     p {
       margin: 10px auto;
@@ -266,27 +278,172 @@ header {
 
   .wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: #E5E5E5;
- div {
-   margin: 0 10px;
- }
+
+    .block1 {
+      display: flex;
+      width: 75%;
+      justify-content: space-between;
+
+      .block2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        width: 60%;
+
+      }
+    }
   }
 }
+
 .end {
   background: #171717;
-  color:#717171;
+  color: #717171;
   text-align: center;
+
   .line {
     width: 100%;
     height: 2px;
     background: #2F2E2E;
     margin: 0 auto;
   }
+
   p {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+@media all and (max-width: 1023px) {
+  html {
+    font-size: 14px;
+  }
+
+  .slide {
+    .wrapper {
+      .new {
+        width: 50%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  body {
+    font-size: 10px;
+    padding: 100px 0 0;
+  }
+
+  header {
+    height: 100px;
+
+    .header2 {
+      position: relative;
+      margin: 10px auto;
+
+      a {
+        position: absolute;
+        margin-top: 40px;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        p {
+          text-align: center;
+          margin: 0;
+
+          img {
+            width: 150px;
+          }
+        }
+      }
+
+      .personal {
+        .btn {
+          width: 40px;
+          display: flex;
+          justify-content: center;
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .slide {
+    background-size: cover;
+
+    .wrapper {
+      .new {
+        padding: 25px 15px;
+        text-align: left;
+        max-width: 90%;
+        width: 60%;
+      }
+
+      .btnn {
+        width: 100%;
+        padding: 10px 35px;
+
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+  .boxes {
+    .wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    .wrapper {
+      display: block;
+
+      .text_card {
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .legacy {
+    .wrapper {
+      max-width: 100%;
+
+      .text_stat {
+        display: block;
+
+        strong {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .wrapper {
+      display: block;
+      text-align: center;
+
+      .block1 {
+        width: 100%;
+
+        .block2 {
+          display: block;
+          width: 50%;
+        }
+      }
+    }
+  }
+
 }
