@@ -33,6 +33,7 @@ header {
   right: 0;
   width: 100%;
   background: white;
+  z-index: 1;
 }
 
 .header2 {
@@ -42,6 +43,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1620px;
 
   .text {
     color: #6D6C79;
@@ -83,46 +85,98 @@ header {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  max-width: 1620px;
+  margin: 0 auto;
+  position: relative;
 
-  .wrapper {
-    padding: 15px;
-
-    .new {
-      padding-top: 20px;
+  .tns-outer {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 150px;
+    .tns-nav {
       display: flex;
-      flex-direction: column;
-      max-width: 30%;
-      text-align: center;
-      max-height: 15%;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      left: 45%;
 
-      strong {
-        font-size: 2.25rem;
+      button {
+        border-radius: 100%;
+        border: #A8868E;
+        border-color: #A8868E;
+        background: #A8868E;
+      }
+      .tns-nav-active {
+        border-radius: 100%;
+        border-color: yellow;
+        background: yellow;
+        border: yellow;
+      }
+    }
+  }
+  .wrapper1 {
+
+    .slide1 {
+      .new {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-height: 15%;
       }
 
-      p {
+      .btnn {
+        text-align: center;
+        margin: 0;
 
-        font-size: 1rem;
+        .btn {
+          font-size: 0.8rem;
+          padding: 10px 35px;
+          align-self: center;
+          background: #FFED00;
+          border: none;
+          border-radius: 8px;
+          margin-bottom: 30px;
+        }
       }
-
-
     }
 
-    .btnn {
-      width: 30%;
-      text-align: center;
+    .slide2 {
+      .new {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-height: 15%;
+      }
 
-      .btn {
-        font-size: 0.8rem;
-        padding: 10px 35px;
-        align-self: center;
-        background: #FFED00;
-        border: none;
-        border-radius: 8px;
-        margin-bottom: 30px;
+      .btnn {
+        text-align: center;
+        margin: 0;
+
+        .btn {
+          font-size: 0.8rem;
+          padding: 10px 35px;
+          align-self: center;
+          background: #FFED00;
+          border: none;
+          border-radius: 8px;
+          margin-bottom: 30px;
+        }
       }
     }
   }
 }
+
+
+.tns-outer {
+  width: 300px;
+
+  .tns-ovh {
+    margin: 10px 20px;
+  }
+}
+
 
 .boxes {
   .wrapper {
@@ -379,20 +433,83 @@ header {
   .slide {
     background-size: cover;
 
-    .wrapper {
-      .new {
-        padding: 25px 15px;
-        text-align: left;
-        max-width: 90%;
-        width: 60%;
+    .tns-outer {
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 0 auto;
+      .tns-nav {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 10px;
+        left: 45%;
+
+        button {
+          border-radius: 100%;
+          border: #A8868E;
+          border-color: #A8868E;
+          background: #A8868E;
+        }
+        .tns-nav-active {
+          border-radius: 100%;
+          border-color: yellow;
+          background: yellow;
+          border: yellow;
+        }
+      }
+    }
+    .wrapper1 {
+
+      .slide1 {
+        .new {
+          padding-top: 20px;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          max-width: 70%;
+        }
+
+        .btnn {
+          text-align: center;
+          margin: 0;
+
+          .btn {
+            width: 100%;
+            font-size: 0.8rem;
+            padding: 10px 35px;
+            align-self: center;
+            background: #FFED00;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 30px;
+          }
+        }
       }
 
-      .btnn {
-        width: 100%;
-        padding: 10px 35px;
+      .slide2 {
+        .new {
+          padding-top: 20px;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          max-width: 70%;
+        }
 
-        .btn {
-          width: 100%;
+        .btnn {
+          text-align: center;
+          margin: 0;
+
+          .btn {
+            width: 100%;
+            font-size: 0.8rem;
+            padding: 10px 35px;
+            align-self: center;
+            background: #FFED00;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 30px;
+          }
         }
       }
     }
